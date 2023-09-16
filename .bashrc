@@ -22,6 +22,9 @@ shopt -s checkwinsize
 shopt -s expand_aliases
 shopt -s histappend
 
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=10000
 export HISTIGNORE='pwd:exit:fg:bg:top:clear:history:ls:uptime:df'
 export PATH=~:$PATH
+
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
