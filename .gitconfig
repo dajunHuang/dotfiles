@@ -1,0 +1,5 @@
+[user]
+	email = djhuang_1@qq.com
+	name = dajunhuang
+[alias]
+    graph = log --graph --decorate --oneline
