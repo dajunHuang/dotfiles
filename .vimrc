@@ -1,7 +1,11 @@
-filetype on
-filetype plugin indent on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+call vundle#end()
 
 syntax on
+filetype off
+filetype plugin indent on
 
 set modelines=0
 set nocompatible
@@ -41,10 +45,11 @@ runtime! macros/matchit.vim
 highlight VertSplit cterm=NONE
 
 let g:tmux_navigator_no_mappings = 1
+let g:ycm_auto_hover = ""
 noremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
 noremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
 noremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
 noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
 noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
-
-noremap <silent> <c-p> :CtrlP
+noremap <c-p> :CtrlP
+noremap <F12> :YcmCompleter GoTo<cr>

@@ -4,3 +4,9 @@
 [submodule "vim-tmux-navigator"]
 	path = .vim/pack/plugins/start/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "vundle"]
+	path = .vim/bundle/Vundle.vim
+	url = git@github.com:VundleVim/Vundle.vim.git
+[submodule "youcompleteme"]
+	path = .vim/pack/YouCompleteMe/opt/YouCompleteMe
+	url = git@github.com:ycm-core/YouCompleteMe.git
