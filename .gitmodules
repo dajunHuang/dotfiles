@@ -10,3 +10,6 @@
 [submodule "youcompleteme"]
 	path = .vim/pack/YouCompleteMe/opt/YouCompleteMe
 	url = git@github.com:ycm-core/YouCompleteMe.git
+[submodule "nerdtree"]
+	path = .vim/pack/vendor/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
