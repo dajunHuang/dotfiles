@@ -1,3 +1,9 @@
+```bash
+git clone git@github.com:dajunHuang/dotfiles.git
+cd dotfiles
+git submodule update --init --recursive
+```
+
 ## 用到的插件
 
 [Vundle](https://github.com/VundleVim/Vundle.vim)
