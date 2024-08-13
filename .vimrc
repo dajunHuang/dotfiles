@@ -17,9 +17,9 @@ set encoding=utf-8
 set wrap
 set textwidth=79
 set formatoptions=tcqrn1
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set noshiftround
 set scrolloff=3
@@ -41,14 +41,17 @@ set autoindent
 set smartindent
 set laststatus=0
 set completeopt-=preview
+set signcolumn=no
 
 runtime! macros/matchit.vim
 
 highlight VertSplit cterm=NONE
+highlight YcmErrorLine guibg=#3f0000
 
 let g:tmux_navigator_no_mappings = 1
+let NERDTreeWinSize = 25
 let g:ycm_auto_hover = ""
-let NERDTreeWinSize = 30
+" let NERDTreeShowHidden=1
 
 noremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
 noremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
@@ -58,8 +61,11 @@ noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
 noremap <c-p> :CtrlP
 noremap <F12> :YcmCompleter GoTo<cr>
 noremap <F3> :NERDTreeToggle<cr>
+noremap <F4> :YcmCompleter FixIt<cr>
+nmap <F5> :NERDTreeFocus<cr>R<c-w><c-p>
+nmap <F2> <plug>(YCMHover)
 noremap <c-n> :NERDTreeFocus<cr>
-noremap <c-f> :NERDTreeFind<CR>
+noremap <c-c> :nohlsearch<cr>
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
