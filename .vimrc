@@ -1,10 +1,3 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-call vundle#end()
-
-packadd YouCompleteMe
-
 syntax on
 filetype off
 filetype plugin indent on
@@ -45,24 +38,19 @@ set signcolumn=no
 runtime! macros/matchit.vim
 
 highlight VertSplit cterm=NONE
-highlight YcmErrorLine guibg=#3f0000
 
 let g:tmux_navigator_no_mappings = 1
 let NERDTreeWinSize = 25
-let g:ycm_auto_hover = ""
-" let NERDTreeShowHidden=1
+let NERDTreeShowHidden=1
 
 noremap <silent> <c-h> :<C-U>TmuxNavigateLeft<cr>
 noremap <silent> <c-j> :<C-U>TmuxNavigateDown<cr>
 noremap <silent> <c-k> :<C-U>TmuxNavigateUp<cr>
 noremap <silent> <c-l> :<C-U>TmuxNavigateRight<cr>
-noremap <silent> {Previous-Mapping} :<C-U>TmuxNavigatePrevious<cr>
+noremap <silent> ctrl-\ :<C-U>TmuxNavigatePrevious<cr>
 noremap <c-p> :CtrlP
-noremap <F12> :YcmCompleter GoTo<cr>
 noremap <F3> :NERDTreeToggle<cr>
-noremap <F4> :YcmCompleter FixIt<cr>
 nmap <F5> :NERDTreeFocus<cr>R<c-w><c-p>
-nmap <F2> <plug>(YCMHover)
 noremap <c-n> :NERDTreeFocus<cr>
 noremap <c-c> :nohlsearch<cr>
 
